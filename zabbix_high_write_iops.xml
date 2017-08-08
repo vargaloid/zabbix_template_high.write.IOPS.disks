@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.2</version>
-    <date>2017-08-03T15:21:21Z</date>
+    <date>2017-08-08T10:38:36Z</date>
     <groups>
         <group>
             <name>Self Made</name>
@@ -31,7 +31,7 @@
                     <snmp_oid/>
                     <key>discovery_disks</key>
                     <delay>3600</delay>
-                    <status>0</status>
+                    <status>1</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
@@ -104,7 +104,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{High Write IOPS disk:device.write.ops[{#DEVICENAME}].min(#3)}&gt;40</expression>
+                            <expression>{High Write IOPS disk:device.write.ops[{#DEVICENAME}].min(20m)}&gt;50</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>High Write IOPS disk:{#DEVICENAME}</name>
